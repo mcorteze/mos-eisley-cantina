@@ -1,0 +1,163 @@
+.main {
+  padding-top: 2rem;
+}
+
+
+.label {
+  color: var(--neon-blue);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.input,
+.select {
+  background-color: rgba(30, 30, 30, 0.9);
+  border: 1px solid var(--metal-iron);
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 0;
+  /* Square edges */
+  width: 100%;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 1px;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 10px rgba(116, 238, 21, 0.2);
+  background-color: #252525;
+}
+
+.card {
+  background: #222;
+  border: 1px solid var(--metal-iron);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border-color: var(--neon-purple);
+}
+
+.cardImg {
+  filter: grayscale(0.5) contrast(1.1);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--metal-iron);
+}
+
+.card:hover .cardImg {
+  filter: grayscale(0) contrast(1.2);
+}
+
+.cardBody {
+  padding: 1.5rem;
+  background: linear-gradient(180deg, #222 0%, #1a1a1a 100%);
+}
+
+.cardTitle {
+  color: var(--neon-yellow);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(255, 231, 0, 0.3);
+}
+
+.meta {
+  color: var(--metal-alum);
+  font-size: 0.9rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta strong {
+  color: var(--neon-blue);
+  font-weight: 500;
+}
+
+.precioContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.precioNormal {
+  text-decoration: line-through;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.precioOferta {
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.btnAgregar {
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.btnAgregar:hover {
+  background: rgba(116, 238, 21, 0.1);
+  box-shadow: 0 0 15px rgba(116, 238, 21, 0.4);
+  text-shadow: 0 0 5px var(--neon-green);
+}
+
+.resultado {
+  color: var(--metal-alum);
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--metal-iron);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.noResultados {
+  color: var(--metal-iron);
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+.alertFloating {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 1rem 2rem;
+  box-shadow: 0 0 20px rgba(116, 238, 21, 0.2);
+  z-index: 2000;
+  font-family: "Orbitron", sans-serif;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

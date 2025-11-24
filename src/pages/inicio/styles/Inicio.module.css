@@ -1,0 +1,136 @@
+/* 🔹 Todas las sections deben tener espacio vertical consistente */
+section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* 🔹 Si quieres que la primera sección tenga un poco menos (opcional) */
+.main>.container>section:first-of-type {
+  margin-top: 2rem;
+}
+
+
+.sectionIntro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  background: var(--bg-panel);
+  padding: 2.5rem;
+  border: 1px solid var(--metal-iron);
+  border-left: 4px solid var(--neon-yellow);
+  box-shadow: var(--shadow-panel);
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Tech decoration lines */
+.sectionIntro::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 20px;
+  width: 100px;
+  height: 2px;
+  background: var(--neon-yellow);
+  box-shadow: 0 0 5px var(--neon-yellow);
+}
+
+.sectionIntroText {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mediaContainer {
+  position: relative;
+  width: 400px;
+  aspect-ratio: 16 / 9;
+  /* Proporción tipo video */
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #000;
+  /* para que se vea bien mientras carga */
+}
+
+.mediaImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* recorta suavemente la imagen vertical */
+  object-position: center;
+  /* centra la imagen */
+  display: block;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: linear-gradient(145deg, #222, #1a1a1a);
+  border: 1px solid var(--metal-iron);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corner accent */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-blue);
+  transition: width 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  border-color: #555;
+}
+
+.card:hover::before {
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  filter: grayscale(0.6) contrast(1.2);
+  transition: filter 0.3s ease;
+}
+
+.card:hover img {
+  filter: grayscale(0) contrast(1.1);
+}
+
+.card h5 {
+  color: var(--neon-blue);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(77, 238, 234, 0.3);
+}
+
+.card p {
+  color: var(--metal-alum);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* Specific accent colors for different card types if needed, 
+   but keeping uniform for now to match "industrial" vibe */

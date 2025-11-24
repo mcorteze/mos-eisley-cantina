@@ -1,0 +1,92 @@
+/* Fondo y estructura */
+.header {
+  position: relative;
+  text-align: center;
+  padding: 64px 20px 48px 20px;
+  color: #fdf6e3;
+
+  /* Capa base: imagen original del sitio */
+  background:
+    /* Gradiente oscuro encima */
+    linear-gradient(180deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(15, 15, 15, 0.9) 10%,
+      rgba(30, 30, 30, 0.85) 20%),
+    /* Imagen original del hero */
+    url("../../../assets/img/shared/hero-bg.png") no-repeat center 80%;
+
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Luz ambiental simulando neón o luz tenue */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 25%,
+      rgba(255, 193, 7, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 70%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Efecto de granulado leve */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Título principal */
+.title {
+  position: relative;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-cantina-gold);
+  text-shadow:
+    0 0 12px rgba(255, 193, 7, 0.45),
+    0 2px 6px rgba(0, 0, 0, 0.8);
+  margin: 0 auto 10px auto;
+  z-index: 2;
+}
+
+/* Subtítulo */
+.subtitle {
+  position: relative;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #aaa;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  max-width: 640px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Brillo suave animado */
+@keyframes neonGlint {
+
+  0%,
+  100% {
+    text-shadow: 0 0 12px rgba(255, 193, 7, 0.45),
+      0 2px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  50% {
+    text-shadow: 0 0 18px rgba(255, 193, 7, 0.9),
+      0 2px 6px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.title:hover {
+  animation: neonGlint 3s ease-in-out infinite;
+}
