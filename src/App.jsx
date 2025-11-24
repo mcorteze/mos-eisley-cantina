@@ -9,7 +9,7 @@ import QuienesSomos from "./pages/quienessomos/QuienesSomos.jsx";
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.MODE === "production" ? "/frontend2_semana3" : "/"}>
+    <BrowserRouter basename={import.meta.env.MODE === "production" ? "/mos-eisley-cantina" : "/"}>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/inicio" element={<Layout><Inicio /></Layout>} />

@@ -9,5 +9,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: '/frontend2_semana3/',
+  base: '/mos-eisley-cantina/',
 })

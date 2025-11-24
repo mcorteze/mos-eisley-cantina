@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://mcorteze.github.io/frontend2_semana3/",
+  "homepage": "https://mcorteze.github.io/mos-eisley-cantina/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "clean": "Remove-Item -Recurse -Force node_modules,package-lock.json; npm cache clean --force; npm install",
-    "predeploy": "vite build --base=/frontend2_semana3/",
-    "deploy": "gh-pages -d dist -b gh-pages -f --repo=https://github.com/mcorteze/frontend2_semana3.git"
+    "predeploy": "vite build --base=/mos-eisley-cantina/",
+    "deploy": "gh-pages -d dist -b gh-pages -f --repo=https://github.com/mcorteze/mos-eisley-cantina.git"
   },
   "dependencies": {
     "antd": "^5.27.4",
